@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 
 class Navbar extends Component {
     render() {
@@ -9,24 +11,24 @@ class Navbar extends Component {
                 </div>
                 <div id="sidebar-menu">
                 <ul className="list-unstyled components">
-                    <li><a href="/myaccount"><i className="fa fa-home"></i> Home</a></li>
-                    <li><a href=""><i className="fa fa-dollar"></i> Hot Deals</a></li>
-                    <li><a href=""><i className="fa fa-map-marker"></i>  Stores</a></li>
-                    <li><a href=""><i className="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</a></li>
+                    <li><Link to="/"><i className="fa fa-home"></i> Home</Link></li>
+                    <li><Link to="/promotions"><i className="fa fa-dollar"></i> Hot Deals</Link></li>
+                    <li><Link to="/stores"><i className="fa fa-map-marker"></i>  Stores</Link></li>
+                    <li><Link to="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</Link></li>
                 </ul>
                 <ul className="list-unstyled components">
                     <p>Upload</p>
-                    <li><a href="/myaccount"><i className="fa fa-camera"></i> Take Photo</a></li>
-                    <li><a href=""><i className="fa fa-picture-o"></i> Gallery</a></li>
+                    <li><Link to="/upload"><i className="fa fa-camera"></i> Take Photo</Link></li>
+                    <li><Link to="/gallery"><i className="fa fa-picture-o"></i> Gallery</Link></li>
                 </ul>
                 <ul className="list-unstyled components">
                     <p>My Account</p>
-                    <li><a href="/myaccount"><i className="fa fa-user"></i> My Profile</a></li>
-                    <li><a href=""><i className="fa fa-cog"></i> Settings</a></li>
+                    <li><Link to="/profile"><i className="fa fa-user"></i> My Profile</Link></li>
+                    <li><Link to="/settings"><i className="fa fa-cog"></i> Settings</Link></li>
                 </ul>
                 </div>
                 <ul className="list-unstyled CTAs">
-                    <li><a href="/users/logout" className="download">Sign Out</a></li>
+                    <li><Link to="/out" className="signoutButton">Sign Out</Link></li>
                 </ul>
             </nav>
 
